@@ -1,0 +1,41 @@
+{
+  "name": "headerhawk",
+  "version": "0.1.0",
+  "description": "CLI that audits a site's HTTP security headers (CSP, HSTS, etc.) and scores them A-F.",
+  "type": "module",
+  "main": "dist/cli.js",
+  "bin": {
+    "headerhawk": "dist/cli.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/cli.js",
+    "dev": "tsx src/cli.ts",
+    "test": "vitest run",
+    "prepublishOnly": "npm run build"
+  },
+  "license": "MIT",
+  "author": "Emmanuel Penafiel",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Afaguayo/headerhawk.git"
+  },
+  "keywords": [
+    "security",
+    "http-headers",
+    "cli",
+    "cybersecurity"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsx": "^4.16.2",
+    "typescript": "^5.5.3",
+    "vitest": "^5.0.3"
+  }
+}
